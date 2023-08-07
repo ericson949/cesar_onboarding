@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  place-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  min-height: 100vh;
+}
+
+
+.react-datepicker-wrapper {
+  @apply w-full
+}
+.react-datepicker__input-container input {
+  @apply w-full h-11 py-3 border-inputBorder border-2 rounded-xl focus:border-accent
+  disabled:bg-[#E6EAEF] disabled:text-[#2A3950] disabled:placeholder-[#2A3950]
+  disabled:placeholder:font-bold
+  focus:outline-none text-title bg-transparent font-medium placeholder-textColor/50 placeholder:font-normal
+  pl-4
+}
+.react-datepicker {
+  @apply rounded-[20px] border-transparent shadow-lg !important
+}
+.react-datepicker__navigation{
+  @apply mt-4  !important
+}
+.react-datepicker__navigation-icon{
+  @apply before:top-2.5 !important
+}
+.react-datepicker__header {
+  @apply bg-white rounded-t-[20px] pt-4 px-4 border-b-transparent !important
+}
+.react-datepicker__triangle{
+  @apply translate-x-[240px] shadow bg-white after:border-b-white !important
+}
+.react-datepicker__day--keyboard-selected{
+  @apply bg-white !important
+}
+.react-datepicker__day{
+  @apply hover:bg-[#43B8B1] hover:text-white hover:rounded-full !important
+}
+.react-datepicker__day--selected{
+  @apply bg-[#43B8B1]  rounded-full !important
+}
+.react-datepicker__day-names{
+  @apply mt-2 !important
+}
+
+.react-datepicker__day--disabled{
+  @apply hover:bg-transparent hover:text-[#ccc] !important
+}
